@@ -1,0 +1,18 @@
+{
+  "packageManager": "yarn@4.4.1",
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@yarnpkg/esbuild-plugin-pnp": "^3.0.0-rc.15",
+    "esbuild": "^0.23.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "node esbuild.config.js"
+  }
+}
