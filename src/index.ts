@@ -3,8 +3,7 @@ import 'dotenv/config';
 import { Client, GatewayIntentBits, Interaction } from 'discord.js';
 
 import commands from './commands/commands';
-import { auctionCalc } from './commands/utility/auctionMoneyCalc';
-import { ping } from './commands/utility/ping';
+import { healthCheck } from './utils/healthCheck';
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
@@ -40,4 +39,5 @@ const startBot = async () => {
   });
 };
 
+healthCheck.listen(8080);
 startBot();

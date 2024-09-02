@@ -1,7 +1,3 @@
-import {
-  ActionRowData, ButtonBuilder, ButtonComponentData, ButtonStyle, ComponentType
-} from 'discord.js';
-
 import { SlashCommand } from '../../types/slashCommand';
 
 export const auctionCalc: SlashCommand = {
@@ -38,7 +34,8 @@ export const auctionCalc: SlashCommand = {
 
 function getResultText(...input: (string | number)[]): string {
   return (
-    `> 마지노선 ${input[0]}G\n> **입찰 추천 금액**:money_mouth:\n` +
+    `> 마지노선 ${input[0]}G\n` +
+    `> **입찰 추천 금액**:money_mouth:\n` +
     "> ```" +
     input[1] +
     "```"
